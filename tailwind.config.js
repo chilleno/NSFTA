@@ -6,11 +6,34 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      sm: '375px',
+      md: '428px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    colors: {
+      'main': {
+        light: '#78b8d8',
+        primary: '#88d0f5',
+        dark: '#69a1bd',
+      },
+      'gray': {
+        DEFAULT: '#5e6478',
+        primary: '#5e6478',
+        light: '#9096ad',
+      },
+      'white': {
+        DEFAULT: '#FFFFFF ',
+      },
+    },
+    fontFamily: {
+      outfit: ['Outfit-Medium', 'sans-serif'],
+    },
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'newsletter-bg': "url('/wallpaper.svg')",
+        'newsletter-mobile': "url('/wallpaperMobile.svg')",
       },
     },
   },
