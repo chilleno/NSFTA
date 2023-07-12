@@ -32,8 +32,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'newsletter-bg': "url('/wallpaper.svg')",
-        'newsletter-mobile': "url('/wallpaperMobile.svg')",
+        'main-color': "var(--background-linear, #77B7D7)",
       },
     },
   },
