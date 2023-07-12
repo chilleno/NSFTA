@@ -34,6 +34,16 @@ module.exports = {
       backgroundImage: {
         'main-color': "var(--background-linear, #77B7D7)",
       },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        bounce: {
+          '0%, 100%': { transform: 'translateY(-25%)', 'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)' },
+          '50%': { transform: 'transform: translateY(0)', 'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)' },
+        },
+      },
     },
   },
   plugins: [],
