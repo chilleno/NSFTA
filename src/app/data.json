@@ -1,167 +1,165 @@
 {
-    "data": {
-        "chapters": [
-            {
-                "id": 25,
-                "name": "SOMOS BUENOS AMIGOS",
-                "video_url": "https://www.youtube.com/watch?v=mZoJrgUgGPY",
-                "have_word": true,
-                "word": "Quimerico"
-            },
-            {
-                "id": 24,
-                "name": "NOS MUDAMOS",
-                "video_url": "https://www.youtube.com/watch?v=aT5v9IyM4PQ",
-                "have_word": true,
-                "word": "Grecoromana"
-            },
-            {
-                "id": 23,
-                "name": "PATAS BLANCAS",
-                "video_url": "https://www.youtube.com/watch?v=jK-P-SZ0gPM",
-                "have_word": true,
-                "word": "Alegocia"
-            },
-            {
-                "id": 22,
-                "name": "BUENOS TRABAJOS",
-                "video_url": "https://www.youtube.com/watch?v=HXnZHAfik9k",
-                "have_word": true,
-                "word": "Efusivo"
-            },
-            {
-                "id": 21,
-                "name": "ANIVERSARIO",
-                "video_url": "https://www.youtube.com/watch?v=jsPcaNrnv2I",
-                "have_word": true,
-                "word": "Abigarrado"
-            },
-            {
-                "id": 20,
-                "name": "TENEMOS MIEDO",
-                "video_url": "https://www.youtube.com/watch?v=IOUU9agFYJU",
-                "have_word": true,
-                "word": "Excecracion"
-            },
-            {
-                "id": 19,
-                "name": "LUNES DE VARIETÉ",
-                "video_url": "https://www.youtube.com/watch?v=Z0-Wl9Z7dyg",
-                "have_word": true,
-                "word": "Infulable"
-            },
-            {
-                "id": 18,
-                "name": "LUCHO ANDA HORNY",
-                "video_url": "https://www.youtube.com/watch?v=2JxBbA-RTJE",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 17,
-                "name": "LUCHO PIDIÓ MATRIMONIO",
-                "video_url": "https://www.youtube.com/watch?v=UBgBkOgqFDw",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 16,
-                "name": "LAS MASCOTAS",
-                "video_url": "https://www.youtube.com/watch?v=bvlvdCshfVs",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 15,
-                "name": "JUGUETES DE LA INFANCIA",
-                "video_url": "https://www.youtube.com/watch?v=EZB_JZczZyU",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 14,
-                "name": "MOMENTOS IMPORTANTES",
-                "video_url": "https://www.youtube.com/watch?v=rj_BH4WV1BY",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 13,
-                "name": "CONVIVIR EN PAREJA",
-                "video_url": "https://www.youtube.com/watch?v=QBR8vpJ4J_s",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 12,
-                "name": "LA GENTE CAMBIA?",
-                "video_url": "https://www.youtube.com/watch?v=89BWqYfIesg",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 11,
-                "name": "Nos Reímos Caleta",
-                "video_url": "https://www.youtube.com/watch?v=h9uFc8D9WEE",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 10,
-                "name": "Capítulo 8",
-                "video_url": "https://www.youtube.com/watch?v=2N8IcxX0OaA",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 9,
-                "name": "Capítulo 7",
-                "video_url": "https://www.youtube.com/watch?v=eLaM0-eWSN0",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 8,
-                "name": "Capítulo 6",
-                "video_url": "https://www.youtube.com/watch?v=Pk00NriRsu8",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 7,
-                "name": "Capítulo 5",
-                "video_url": "https://www.youtube.com/watch?v=ZrGpVnYynCA",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 6,
-                "name": "Capítulo 4",
-                "video_url": "https://www.youtube.com/watch?v=EMaTckBJOnw",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 5,
-                "name": "Capítulo 3",
-                "video_url": "https://www.youtube.com/watch?v=r7LtlKr82qs",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 4,
-                "name": "Capítulo 2",
-                "video_url": "https://www.youtube.com/watch?v=iFHgprkO2Uo",
-                "have_word": false,
-                "word": ""
-            },
-            {
-                "id": 3,
-                "name": "Capítulo 1",
-                "video_url": "https://www.youtube.com/watch?v=2AMy65q282c",
-                "have_word": false,
-                "word": ""
-            }
-        ]
-    }
+    "chapters": [
+        {
+            "id": 25,
+            "name": "SOMOS BUENOS AMIGOS",
+            "video_url": "https://www.youtube.com/embed/mZoJrgUgGPY",
+            "have_word": true,
+            "word": "Quimerico"
+        },
+        {
+            "id": 24,
+            "name": "NOS MUDAMOS",
+            "video_url": "https://www.youtube.com/embed/aT5v9IyM4PQ",
+            "have_word": true,
+            "word": "Grecoromana"
+        },
+        {
+            "id": 23,
+            "name": "PATAS BLANCAS",
+            "video_url": "https://www.youtube.com/embed/jK-P-SZ0gPM",
+            "have_word": true,
+            "word": "Alegocia"
+        },
+        {
+            "id": 22,
+            "name": "BUENOS TRABAJOS",
+            "video_url": "https://www.youtube.com/embed/HXnZHAfik9k",
+            "have_word": true,
+            "word": "Efusivo"
+        },
+        {
+            "id": 21,
+            "name": "ANIVERSARIO",
+            "video_url": "https://www.youtube.com/embed/jsPcaNrnv2I",
+            "have_word": true,
+            "word": "Abigarrado"
+        },
+        {
+            "id": 20,
+            "name": "TENEMOS MIEDO",
+            "video_url": "https://www.youtube.com/embed/IOUU9agFYJU",
+            "have_word": true,
+            "word": "Excecracion"
+        },
+        {
+            "id": 19,
+            "name": "LUNES DE VARIETÉ",
+            "video_url": "https://www.youtube.com/embed/Z0-Wl9Z7dyg",
+            "have_word": true,
+            "word": "Infulable"
+        },
+        {
+            "id": 18,
+            "name": "LUCHO ANDA HORNY",
+            "video_url": "https://www.youtube.com/embed/2JxBbA-RTJE",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 17,
+            "name": "LUCHO PIDIÓ MATRIMONIO",
+            "video_url": "https://www.youtube.com/embed/UBgBkOgqFDw",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 16,
+            "name": "LAS MASCOTAS",
+            "video_url": "https://www.youtube.com/embed/bvlvdCshfVs",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 15,
+            "name": "JUGUETES DE LA INFANCIA",
+            "video_url": "https://www.youtube.com/embed/EZB_JZczZyU",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 14,
+            "name": "MOMENTOS IMPORTANTES",
+            "video_url": "https://www.youtube.com/embed/rj_BH4WV1BY",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 13,
+            "name": "CONVIVIR EN PAREJA",
+            "video_url": "https://www.youtube.com/embed/QBR8vpJ4J_s",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 12,
+            "name": "LA GENTE CAMBIA?",
+            "video_url": "https://www.youtube.com/embed/89BWqYfIesg",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 11,
+            "name": "Nos Reímos Caleta",
+            "video_url": "https://www.youtube.com/embed/h9uFc8D9WEE",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 10,
+            "name": "Capítulo 8",
+            "video_url": "https://www.youtube.com/embed/2N8IcxX0OaA",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 9,
+            "name": "Capítulo 7",
+            "video_url": "https://www.youtube.com/embed/eLaM0-eWSN0",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 8,
+            "name": "Capítulo 6",
+            "video_url": "https://www.youtube.com/embed/Pk00NriRsu8",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 7,
+            "name": "Capítulo 5",
+            "video_url": "https://www.youtube.com/embed/ZrGpVnYynCA",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 6,
+            "name": "Capítulo 4",
+            "video_url": "https://www.youtube.com/embed/EMaTckBJOnw",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 5,
+            "name": "Capítulo 3",
+            "video_url": "https://www.youtube.com/embed/r7LtlKr82qs",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 4,
+            "name": "Capítulo 2",
+            "video_url": "https://www.youtube.com/embed/iFHgprkO2Uo",
+            "have_word": false,
+            "word": ""
+        },
+        {
+            "id": 3,
+            "name": "Capítulo 1",
+            "video_url": "https://www.youtube.com/embed/2AMy65q282c",
+            "have_word": false,
+            "word": ""
+        }
+    ]
 }
