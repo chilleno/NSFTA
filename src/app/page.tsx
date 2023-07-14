@@ -13,7 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     if (audioEnabled) {
-      audio = new Audio('/music/loop_song.ogg');
+      audio = new Audio('/music/loop_song_long.wav');
       audio.loop = true;
       audio.volume = audioEnabled ? 0.2 : 0;
       audio.muted = !audioEnabled;
