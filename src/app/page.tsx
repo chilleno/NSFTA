@@ -97,6 +97,8 @@ export default function Home() {
                   url={chapter.video_url}
                   haveWord={chapter.have_word}
                   word={chapter.word}
+                  setWordList={setWordList}
+                  wordList={wordList}
                 />
             ))
           }
