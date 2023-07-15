@@ -8,9 +8,11 @@ interface TaskListProps {
     url: string;
     haveWord: boolean;
     word: string;
+    setWordList(newWordList:string[]): void;
+    wordList: string[];
 }
 
-const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word }) => {
+const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, setWordList, wordList }) => {
     const [currentTry, setCurrentTry] = useState<string>('');
     const [showError, setShowError] = useState<boolean>(false);
     const [wordMatch, setWordMatch] = useState<boolean>(false);
@@ -21,6 +23,7 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word })
             currentWordList.push(word.toLowerCase());
             localStorage.setItem('wordList', JSON.stringify(currentWordList));
             setWordMatch(true);
+            setWordList(currentWordList);
         }
         if (currentTry.length <= 3 || currentTry.toLowerCase() !== word.toLowerCase()) {
             handleInputError();
