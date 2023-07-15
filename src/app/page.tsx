@@ -7,9 +7,18 @@ import ChapterLeft from './components/ChapterLeft/ChapterLeft';
 import ChapterRight from './components/ChapterRight/ChapterRight';
 
 export default function Home() {
+  const [wordList, setWordList] = useState<string[]>([]);
   const [audioEnabled, setAudioEnabled] = useState<boolean>(false);
   const [chapterList, setChapterList] = useState<any>(data.chapters);
   let audio: HTMLAudioElement | null = null;
+
+
+  useEffect(() => {
+    const currentWordList = JSON.parse(localStorage.getItem('wordList') || '[]');
+    if (currentWordList && currentWordList.length > 0) {
+      setWordList(currentWordList);
+    }
+  }, [wordList])
 
   useEffect(() => {
     if (audioEnabled) {
@@ -41,7 +50,7 @@ export default function Home() {
         <div className="z-10 w-full items-center justify-center flex">
           <div className="w-1/6">
             <div className="absolute top-20 left-20">
-              <h1 className="text-5xl">0/10</h1>
+              <h1 className="text-5xl">{wordList.length || '0'}/10</h1>
             </div>
           </div>
           <div className="w-4/6">
@@ -77,6 +86,8 @@ export default function Home() {
                   url={chapter.video_url}
                   haveWord={chapter.have_word}
                   word={chapter.word}
+                  setWordList={setWordList}
+                  wordList={wordList}
                 />
                 :
                 <ChapterRight
