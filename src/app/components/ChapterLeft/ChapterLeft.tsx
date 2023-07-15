@@ -1,4 +1,6 @@
-import { useState } from 'react';
+'use client'
+
+import { useState, useEffect } from 'react';
 
 interface TaskListProps {
     id: number;
@@ -11,10 +13,14 @@ interface TaskListProps {
 const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word }) => {
     const [currentTry, setCurrentTry] = useState<string>('');
     const [showError, setShowError] = useState<boolean>(false);
+    const [wordMatch, setWordMatch] = useState<boolean>(false);
 
     const handleWordValidation = (): void => {
+        const currentWordList = JSON.parse(localStorage.getItem('wordList') || '[]');
         if (currentTry.toLowerCase() === word.toLowerCase()) {
-            alert('they match!');
+            currentWordList.push(word.toLowerCase());
+            localStorage.setItem('wordList', JSON.stringify(currentWordList));
+            setWordMatch(true);
         }
         if (currentTry.length <= 3 || currentTry.toLowerCase() !== word.toLowerCase()) {
             handleInputError();
@@ -33,6 +39,13 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word })
             setShowError(false);
         }, (1000))
     }
+
+    useEffect(() => {
+        const currentWordList = JSON.parse(localStorage.getItem('wordList') || '[]');
+        if (currentWordList && currentWordList.length > 0 && currentWordList.includes(word.toLowerCase())) {
+            setWordMatch(true);
+        }
+    }, [])
 
     return (
         <div className="w-full flex flex-row mt-24" id={'chapter_' + id}>
@@ -56,7 +69,7 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word })
                         </div>
                         <div className="font-outfit text-2xl mt-5">
                             {
-                                haveWord &&
+                                !wordMatch && haveWord &&
                                 <input
                                     className={`border-b-2 ${showError && 'shake-error'}`}
                                     placeholder="??????????????????"
@@ -64,6 +77,10 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word })
                                     onChange={(e) => setCurrentTry(e.target.value)}
                                     onKeyDown={handlePressEnterButton}
                                 />
+                            }
+                            {
+                                wordMatch &&
+                                word
                             }
                         </div>
                     </div>
