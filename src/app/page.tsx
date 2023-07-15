@@ -18,7 +18,7 @@ export default function Home() {
     if (currentWordList && currentWordList.length > 0) {
       setWordList(currentWordList);
     }
-  }, [wordList])
+  }, [])
 
   useEffect(() => {
     if (audioEnabled) {
