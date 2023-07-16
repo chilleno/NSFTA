@@ -5,6 +5,7 @@ import Logo from './components/Logo/Logo';
 import data from './data.json';
 import ChapterLeft from './components/ChapterLeft/ChapterLeft';
 import ChapterRight from './components/ChapterRight/ChapterRight';
+import Footer from './components/Footer/Footer';
 
 export default function Home() {
   const [wordList, setWordList] = useState<string[]>([]);
@@ -104,6 +105,7 @@ export default function Home() {
           }
         </div>
       </div>
+      <Footer />
     </main>
   )
 }
