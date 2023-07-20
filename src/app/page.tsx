@@ -49,7 +49,26 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-12">
       <div className="z-10 w-full items-center justify-center font-mono text-sm flex flex-col">
         <div className="z-10 w-full items-center justify-center flex xl:flex-row lg:flex-row md:flex-row sm:flex-col">
-        <div className="xl:w-0 lg:w-0 md:w-0 sm:w-full">
+          <div className="xl:hidden lg:hidden md:hidden sm:inline sm:w-full">
+            <div className="flex flex-row">
+              <h1 className="w-1/2 flex content-center justify-center text-5xl mb-10">{wordList.length || '0'}/10</h1>
+              <div className="w-1/2 flex content-center justify-center">
+                {
+                  audioEnabled ?
+                    <>
+                      <SpeakerWaveIcon
+                        onClick={toggleAudio}
+                        className="h-10 w-10 text-blue-500 hover:cursor-pointer"
+                      />
+                    </>
+                    :
+                    <SpeakerXMarkIcon
+                      onClick={toggleAudio}
+                      className="h-10 w-10 text-blue-500 hover:cursor-pointer"
+                    />
+                }
+              </div>
+            </div>
           </div>
           <div className="xl:w-1/6 lg:w-1/6 md:w-1/6 xl:inline lg:inline md:inline sm:hidden">
             <div className="absolute top-20 left-20">
