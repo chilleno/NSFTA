@@ -57,7 +57,7 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, s
         <div className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col mt-12 max-w-screen w-full" id={'chapter_' + id}>
             <iframe src={url} allowFullScreen className="flex xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-[320px] h-[310px] xl:ml-0 lg:ml-0 md:ml-0 sm:ml-4 content-center justify-center border-white border-4" />
             <div className="flex xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-[320px] content-center justify-center">
-                <div className={haveWord ? "flex flex-col w-4/6 max-w-4/6 px-2 py-6" : "flex flex-col w-4/6 max-w-4/6 px-2 py-2"}>
+                <div className={haveWord ? "flex flex-col w-4/6 max-w-4/6 px-2 py-6" : "flex flex-col w-4/6 max-w-4/6 px-2 py-2 mt-20"}>
                     <div className={haveWord ? "bubble grow right max-w-full" : "max-w-full bubble grow right xl:max-h-24 lg:max-h-24 md:max-h-24"}>
                         <div className={haveWord ? "font-outfit text-2xl mt-5" : "font-outfit text-2xl mt-2"}>
                             <b>{name}</b>
