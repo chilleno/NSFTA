@@ -48,16 +48,18 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-12">
       <div className="z-10 w-full items-center justify-center font-mono text-sm flex flex-col">
-        <div className="z-10 w-full items-center justify-center flex">
-          <div className="w-1/6">
+        <div className="z-10 w-full items-center justify-center flex xl:flex-row lg:flex-row md:flex-row sm:flex-col">
+        <div className="xl:w-0 lg:w-0 md:w-0 sm:w-full">
+          </div>
+          <div className="xl:w-1/6 lg:w-1/6 md:w-1/6 xl:inline lg:inline md:inline sm:hidden">
             <div className="absolute top-20 left-20">
               <h1 className="text-5xl">{wordList.length || '0'}/10</h1>
             </div>
           </div>
-          <div className="w-4/6">
+          <div className="xl:w-4/6 lg:w-4/6 md:w-4/6 sm:w-full">
             <Logo />
           </div>
-          <div className="w-1/6">
+          <div className="xl:w-1/6 lg:w-1/6 md:w-1/6 xl:inline lg:inline md:inline sm:hidden">
             <div className="absolute top-20 right-20">
               {
                 audioEnabled ?
@@ -76,34 +78,35 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="z-10 w-full items-center justify-center flex flex-col mt-8">
-          {
-            chapterList && chapterList.map((chapter: any, index: number) => (
-              isEven(index) ?
-                <ChapterLeft
-                  key={'chapter_' + index}
-                  id={chapter.id}
-                  name={chapter.name}
-                  url={chapter.video_url}
-                  haveWord={chapter.have_word}
-                  word={chapter.word}
-                  setWordList={setWordList}
-                  wordList={wordList}
-                />
-                :
-                <ChapterRight
-                  key={'chapter_' + index}
-                  id={chapter.id}
-                  name={chapter.name}
-                  url={chapter.video_url}
-                  haveWord={chapter.have_word}
-                  word={chapter.word}
-                  setWordList={setWordList}
-                  wordList={wordList}
-                />
-            ))
-          }
-        </div>
+        {false &&
+          <div className="z-10 w-full items-center justify-center flex flex-col mt-8">
+            {
+              chapterList && chapterList.map((chapter: any, index: number) => (
+                isEven(index) ?
+                  <ChapterLeft
+                    key={'chapter_' + index}
+                    id={chapter.id}
+                    name={chapter.name}
+                    url={chapter.video_url}
+                    haveWord={chapter.have_word}
+                    word={chapter.word}
+                    setWordList={setWordList}
+                    wordList={wordList}
+                  />
+                  :
+                  <ChapterRight
+                    key={'chapter_' + index}
+                    id={chapter.id}
+                    name={chapter.name}
+                    url={chapter.video_url}
+                    haveWord={chapter.have_word}
+                    word={chapter.word}
+                    setWordList={setWordList}
+                    wordList={wordList}
+                  />
+              ))
+            }
+          </div>}
       </div>
       <Footer />
     </main>
