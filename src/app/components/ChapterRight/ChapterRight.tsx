@@ -56,7 +56,7 @@ const ChapterRight: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, 
     return (
         <div className="w-full flex flex-row mt-24" id={'chapter_' + id}>
             <div className="flex w-1/2 content-center justify-center">
-                <div className="flex w-2/6 p-16">
+                <div className="flex w-2/6 mt-16 ml-10">
                     <img
                         className="h-[198px] w-[169px] animate-[wiggle_3s_ease-in-out_infinite]"
                         src="/logo/claudio.png" />
