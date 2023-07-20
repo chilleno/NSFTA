@@ -76,7 +76,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="z-10 w-full items-center justify-center flex flex-col mt-32">
+        <div className="z-10 w-full items-center justify-center flex flex-col mt-8">
           {
             chapterList && chapterList.map((chapter: any, index: number) => (
               isEven(index) ?
