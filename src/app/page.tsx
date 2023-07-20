@@ -97,8 +97,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {false &&
-          <div className="z-10 w-full items-center justify-center flex flex-col mt-8">
+        {true &&
+          <div className="items-center justify-center flex flex-col mt-8 max-w-screen">
             {
               chapterList && chapterList.map((chapter: any, index: number) => (
                 isEven(index) ?
@@ -125,7 +125,8 @@ export default function Home() {
                   />
               ))
             }
-          </div>}
+          </div>
+        }
       </div>
       <Footer />
     </main>
