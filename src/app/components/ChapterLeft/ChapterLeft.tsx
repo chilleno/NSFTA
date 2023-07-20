@@ -66,7 +66,7 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, s
             </div>
             <div className="flex w-1/2 content-center justify-center">
                 <div className={haveWord ? "flex flex-col w-2/4 px-2 py-6" : "flex flex-col w-2/4 px-2 py-2 mt-24"}>
-                    <div className={haveWord ? "bubble grow right min-w-full" : "min-w-full bubble grow right max-h-16"}>
+                    <div className={haveWord ? "bubble grow right min-w-full" : "min-w-full bubble grow right xl:max-h-16 lg:max-h-24"}>
                         <div className={haveWord ? "font-outfit text-2xl mt-5" : "font-outfit text-2xl mt-2"}>
                             <b>{name}</b>
                         </div>
@@ -101,7 +101,7 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, s
                         </div>
                     </div>
                 </div>
-                <div className="flex w-2/6 mt-16 ml-10">
+                <div className="flex w-2/6 mt-16 xl:ml-28 lg:ml-28">
                     <img
                         className="h-[198px] w-[169px] animate-[wiggle_3s_ease-in-out_infinite]"
                         src="/logo/lucho.png" />
