@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react';
+import ConfettiExplosion from 'react-confetti-explosion';
 
 interface TaskListProps {
     id: number;
@@ -16,6 +17,7 @@ const ChapterRight: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, 
     const [currentTry, setCurrentTry] = useState<string>('');
     const [showError, setShowError] = useState<boolean>(false);
     const [wordMatch, setWordMatch] = useState<boolean>(false);
+    const [isExploding, setIsExploding] = useState<boolean>(false);
 
     const handleWordValidation = (): void => {
         const currentWordList = JSON.parse(localStorage.getItem('wordList') || '[]');
@@ -24,6 +26,7 @@ const ChapterRight: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, 
             localStorage.setItem('wordList', JSON.stringify(currentWordList));
             setWordMatch(true);
             setWordList(currentWordList);
+            setIsExploding(true);
         }
         if (currentTry.length <= 3 || currentTry.toLowerCase() !== word.toLowerCase()) {
             handleInputError();
@@ -80,6 +83,16 @@ const ChapterRight: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, 
                             {
                                 wordMatch &&
                                 word
+                            }
+                            {
+                                isExploding &&
+                                <ConfettiExplosion
+                                    force={0.8}
+                                    duration={3000}
+                                    particleCount={250}
+                                    width={1600}
+                                    zIndex={100}
+                                />
                             }
                         </div>
                     </div>
