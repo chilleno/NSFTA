@@ -58,7 +58,7 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, s
             <iframe src={url} allowFullScreen className="flex xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-[320px] xl:ml-0 lg:ml-0 md:ml-0 sm:ml-4 content-center justify-center border-white border-4" />
             <div className="flex xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-[320px] content-center justify-center">
                 <div className={haveWord ? "flex flex-col w-4/6 max-w-4/6 px-2 py-6 md:-mt-4" : "flex flex-col w-4/6 max-w-4/6 px-2 py-2 xl:mt-24 lg:mt-24 md:mt-10"}>
-                    <div className={haveWord ? "bubble grow right min-w-full" : "min-w-full bubble grow right xl:max-h-24 lg:max-h-24 md:max-h-24"}>
+                    <div className={haveWord ? "bubble grow right max-w-full" : "max-w-full bubble grow right xl:max-h-24 lg:max-h-24 md:max-h-24"}>
                         <div className={haveWord ? "font-outfit text-2xl mt-5" : "font-outfit text-2xl mt-2"}>
                             <b>{name}</b>
                         </div>
@@ -93,7 +93,7 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, s
                         </div>
                     </div>
                 </div>
-                <div className="flex w-2/6 xl:ml-12 lg:ml-12 md:ml-16 xl:mt-16 lg:mt-16 md:mt-16 sm:mt-8 sm:ml-10">
+                <div className="flex w-2/6 xl:mt-16 lg:mt-16 md:mt-16 sm:mt-8">
                     <img
                         className="xl:h-[198px] lg:h-[198px] md:h-[198px] xl:w-[169px] lg:w-[169px] md:w-[169px] sm:absolute sm:w-[90px] sm:h-[120px] animate-[wiggle_3s_ease-in-out_infinite]"
                         src="/logo/lucho.png" />
