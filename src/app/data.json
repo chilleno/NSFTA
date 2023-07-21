@@ -1,6 +1,13 @@
 {
     "chapters": [
         {
+            "id": 26,
+            "name": "DESCONFIAMOS DE TODOS",
+            "video_url": "https://www.youtube.com/embed/6YQuexd_NNA",
+            "have_word": true,
+            "word": "Adulador"
+        },
+        {
             "id": 25,
             "name": "SOMOS BUENOS AMIGOS",
             "video_url": "https://www.youtube.com/embed/mZoJrgUgGPY",
