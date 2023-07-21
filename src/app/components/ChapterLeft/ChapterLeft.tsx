@@ -25,9 +25,11 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, s
         if (currentTry.toLowerCase() === word.toLowerCase()) {
             currentWordList.push(word.toLowerCase());
             localStorage.setItem('wordList', JSON.stringify(currentWordList));
+            setIsExploding(true);
+            playSound();
             setWordMatch(true);
             setWordList(currentWordList);
-            setIsExploding(true);
+            
         }
         if (currentTry.length <= 3 || currentTry.toLowerCase() !== word.toLowerCase()) {
             handleInputError();
@@ -54,6 +56,12 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, s
         }
     }, [])
 
+    const playSound = (): void => {
+        let audio: HTMLAudioElement = new Audio('/music/loop_song_long.wav');
+        audio.volume =  0.2;
+        audio.play();
+    }
+
     return (
         <div className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col mt-12 max-w-screen w-full" id={'chapter_' + id}>
             <iframe src={url} allowFullScreen className="flex xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-[320px] h-[310px] xl:ml-0 lg:ml-0 md:ml-0 sm:ml-4 content-center justify-center border-white border-4" />
@@ -69,7 +77,7 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, s
                         <div className="font-outfit text-2xl mt-5">
                             {
                                 !wordMatch && haveWord &&
-                                <div className="flex flex-row"> 
+                                <div className="flex flex-row">
                                     <input
                                         className={`w-4/6 border-b-2 ${showError && 'shake-error'}`}
                                         placeholder="??????????????????"
