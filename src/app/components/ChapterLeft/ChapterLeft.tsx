@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import ConfettiExplosion from 'react-confetti-explosion';
+import { PaperAirplaneIcon } from '@heroicons/react/24/solid';
 
 interface TaskListProps {
     id: number;
@@ -68,13 +69,19 @@ const ChapterLeft: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, s
                         <div className="font-outfit text-2xl mt-5">
                             {
                                 !wordMatch && haveWord &&
-                                <input
-                                    className={`md:max-w-[150px] sm:max-w-[100px] border-b-2 ${showError && 'shake-error'}`}
-                                    placeholder="??????????????????"
-                                    type="text"
-                                    onChange={(e) => setCurrentTry(e.target.value)}
-                                    onKeyDown={handlePressEnterButton}
-                                />
+                                <div className="flex flex-row"> 
+                                    <input
+                                        className={`w-4/6 border-b-2 ${showError && 'shake-error'}`}
+                                        placeholder="??????????????????"
+                                        type="text"
+                                        onChange={(e) => setCurrentTry(e.target.value)}
+                                        onKeyDown={handlePressEnterButton}
+                                    />
+                                    <PaperAirplaneIcon
+                                        onClick={handleWordValidation}
+                                        className="w-2/6 h-10 hover:cursor-pointer"
+                                    />
+                                </div>
                             }
                             {
                                 wordMatch &&
