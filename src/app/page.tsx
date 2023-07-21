@@ -9,10 +9,7 @@ import Footer from './components/Footer/Footer';
 
 export default function Home() {
   const [wordList, setWordList] = useState<string[]>([]);
-  const [audioEnabled, setAudioEnabled] = useState<boolean>(false);
   const [chapterList, setChapterList] = useState<any>(data.chapters);
-  let audio: HTMLAudioElement | null = null;
-
 
   useEffect(() => {
     const currentWordList = JSON.parse(localStorage.getItem('wordList') || '[]');
@@ -20,26 +17,6 @@ export default function Home() {
       setWordList(currentWordList);
     }
   }, [])
-
-  useEffect(() => {
-    if (audioEnabled) {
-      audio = new Audio('/music/loop_song_long.wav');
-      audio.loop = true;
-      audio.volume = audioEnabled ? 0.2 : 0;
-      audio.muted = !audioEnabled;
-
-      audio.play();
-    }
-
-    return () => {
-      audio && audio.pause();
-      audio = null;
-    };
-  }, [audioEnabled]);
-
-  const toggleAudio = () => {
-    setAudioEnabled(prevState => !prevState);
-  };
 
   function isEven(number: number): boolean {
     return number % 2 === 0;
@@ -53,20 +30,7 @@ export default function Home() {
             <div className="flex flex-row">
               <h1 className="w-1/2 flex content-center justify-center text-5xl mb-10">{wordList.length || '0'}/10</h1>
               <div className="w-1/2 flex content-center justify-center">
-                {
-                  audioEnabled ?
-                    <>
-                      <SpeakerWaveIcon
-                        onClick={toggleAudio}
-                        className="h-10 w-10 text-blue-500 hover:cursor-pointer"
-                      />
-                    </>
-                    :
-                    <SpeakerXMarkIcon
-                      onClick={toggleAudio}
-                      className="h-10 w-10 text-blue-500 hover:cursor-pointer"
-                    />
-                }
+               
               </div>
             </div>
           </div>
@@ -80,20 +44,7 @@ export default function Home() {
           </div>
           <div className="xl:w-1/6 lg:w-1/6 md:w-1/6 xl:inline lg:inline md:inline sm:hidden">
             <div className="absolute top-20 right-20">
-              {
-                audioEnabled ?
-                  <>
-                    <SpeakerWaveIcon
-                      onClick={toggleAudio}
-                      className="h-10 w-10 text-blue-500 hover:cursor-pointer"
-                    />
-                  </>
-                  :
-                  <SpeakerXMarkIcon
-                    onClick={toggleAudio}
-                    className="h-10 w-10 text-blue-500 hover:cursor-pointer"
-                  />
-              }
+             
             </div>
           </div>
         </div>
