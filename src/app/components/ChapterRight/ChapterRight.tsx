@@ -25,9 +25,10 @@ const ChapterRight: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, 
         if (currentTry.toLowerCase() === word.toLowerCase()) {
             currentWordList.push(word.toLowerCase());
             localStorage.setItem('wordList', JSON.stringify(currentWordList));
+            setIsExploding(true);
+            playSound();
             setWordMatch(true);
             setWordList(currentWordList);
-            setIsExploding(true);
         }
         if (currentTry.length <= 3 || currentTry.toLowerCase() !== word.toLowerCase()) {
             handleInputError();
@@ -53,6 +54,12 @@ const ChapterRight: React.FC<TaskListProps> = ({ id, name, url, haveWord, word, 
             setWordMatch(true);
         }
     }, [])
+
+    const playSound = (): void => {
+        let audio: HTMLAudioElement = new Audio('/music/loop_song_long.wav');
+        audio.volume =  0.2;
+        audio.play();
+    }
 
     return (
         <div className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col mt-12 max-w-screen w-full" id={'chapter_' + id}>
