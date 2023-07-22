@@ -6,6 +6,7 @@ import data from './data.json';
 import ChapterLeft from './components/ChapterLeft/ChapterLeft';
 import ChapterRight from './components/ChapterRight/ChapterRight';
 import Footer from './components/Footer/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {
   const [wordList, setWordList] = useState<string[]>([]);
@@ -30,7 +31,7 @@ export default function Home() {
             <div className="flex flex-row">
               <h1 className="w-1/2 flex content-center justify-center text-5xl mb-10">{wordList.length || '0'}/10</h1>
               <div className="w-1/2 flex content-center justify-center">
-               
+
               </div>
             </div>
           </div>
@@ -44,7 +45,7 @@ export default function Home() {
           </div>
           <div className="xl:w-1/6 lg:w-1/6 md:w-1/6 xl:inline lg:inline md:inline sm:hidden">
             <div className="absolute top-20 right-20">
-             
+
             </div>
           </div>
         </div>
@@ -80,6 +81,7 @@ export default function Home() {
         }
       </div>
       <Footer />
+      <Analytics />
     </main>
   )
 }
