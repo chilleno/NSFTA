@@ -1,11 +1,18 @@
 {
     "chapters": [
         {
+            "id": 28,
+            "name": "LOS CASTIGOS",
+            "video_url": "https://www.youtube.com/watch?v=pOoKEtzakhY",
+            "have_word": true,
+            "word": "Guayaca"
+        },
+        {
             "id": 27,
             "name": "MOJATE EL POTITO",
             "video_url": "https://www.youtube.com/watch?v=177WjxuEYjI",
-            "have_word": false,
-            "word": ""
+            "have_word": true,
+            "word": "Julepe"
         },
         {
             "id": 26,
