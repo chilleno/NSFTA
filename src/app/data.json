@@ -1,6 +1,13 @@
 {
     "chapters": [
         {
+            "id": 29,
+            "name": "LA RULETA",
+            "video_url": "https://www.youtube.com/watch?v=fb0_akMomzw",
+            "have_word": true,
+            "word": "Verde"
+        },
+        {
             "id": 28,
             "name": "LOS CASTIGOS",
             "video_url": "https://www.youtube.com/watch?v=pOoKEtzakhY",
